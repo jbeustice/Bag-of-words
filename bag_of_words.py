@@ -95,7 +95,7 @@ def f_tune_svm(X,y):
     return grid_search.best_params_
 
 # print tuned parameters
-print()
+print('')
 print('c_nb --> %a' % f_tune_nb(c_train,y_train))
 print('tf_nb --> %a' % f_tune_nb(tf_train,y_train))
 print('c_svm --> %a' % f_tune_svm(c_train,y_train))
@@ -125,15 +125,15 @@ tf_svm.fit(tf_train,y_train)
 tf_svm_pred = tf_svm.predict(tf_test)
 
 # print model accuracy
-print()
+print('')
 print('Using Count Vectorizer and Naive Bayes')
 print("Accuracy: %0.4f" % (accuracy_score(y_test,c_nb_pred)))
-print()
+print('')
 print('Using TF-IDF Vectorizer and Naive Bayes')
 print("Accuracy: %0.4f" % (accuracy_score(y_test,tf_nb_pred)))
-print()
+print('')
 print('Using Count Vectorizer and SVM')
 print("Accuracy: %0.4f" % (accuracy_score(y_test,c_svm_pred)))
-print()
+print('')
 print('Using TF-IDF Vectorizer and SVM')
 print("Accuracy: %0.4f" % (accuracy_score(y_test,tf_svm_pred)))
