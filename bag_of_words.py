@@ -121,8 +121,8 @@ c_svm_pred = c_svm.predict(c_test)
 
 # SVM TF-IDF with tuned parameters
 tf_svm = svm.SVC(C=1,gamma=0.1)
-tf_svm.fit(c_train,y_train)  
-tf_svm_pred = tf_svm.predict(c_test)
+tf_svm.fit(tf_train,y_train)  
+tf_svm_pred = tf_svm.predict(tf_test)
 
 # print model accuracy
 print()
